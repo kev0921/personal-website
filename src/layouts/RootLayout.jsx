@@ -8,7 +8,7 @@ export default function RootLayout() {
       <GridItem colSpan="3">
         <Navbar />
       </GridItem>
-      <GridItem>
+      <GridItem colSpan="3">
         <Outlet />
       </GridItem>
     </Grid>
