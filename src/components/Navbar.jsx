@@ -8,11 +8,9 @@ export default function Navbar() {
 
   const navStyles = {
     position: "fixed",
-    bg: colorMode === "dark" ? "rgba(0, 0, 0, 0.7)" : "rgba(255, 255, 255, 0.5)",
     height: "60px",
     width: "100%",
     backdropFilter: "blur(10px)",
-    transition: "color, background-color 0.3s ease-out!important"
   }
 
   const iconStyles = {
