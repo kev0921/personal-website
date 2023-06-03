@@ -11,6 +11,7 @@ export default function Navbar() {
     height: "60px",
     width: "100%",
     backdropFilter: "blur(10px)",
+    zIndex: "2"
   }
 
   const iconStyles = {

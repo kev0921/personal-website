@@ -1,6 +1,8 @@
 import { SimpleGrid, Box, useColorMode } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
 import Introduction from "../components/Introduction";
+import VerticalTimeline from "../components/Timeline";
+import Projects from "../components/Projects";
 
 export default function Home() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -50,8 +52,17 @@ export default function Home() {
   return (
     <Box mt="150px" ml="250px" mr = "250px" p="50px" fontSize="40px" pt="70px"
     fontWeight="bold">
+
       <TypingAnimation/>
-      <Introduction></Introduction>
+
+      <Introduction/>
+
+      <Box mt="270px">
+        <VerticalTimeline/>
+      </Box>
+
+      <Projects/>
+
     </Box>
     
   )
