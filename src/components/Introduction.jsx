@@ -1,8 +1,26 @@
 import { SimpleGrid, Box, useColorMode, Text, HStack, Icon } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
 import { ArrowForwardIcon } from '@chakra-ui/icons'
+import { keyframes } from "@emotion/react";
 
 const Introduction = () => {
+
+    const arrowAnimation = keyframes`
+        0% {
+        transform: translateX(0);
+        }
+        50% {
+        transform: translateX(8px);
+        }
+        100% {
+        transform: translateX(0);
+        }
+        `;
+  
+    const AnimatedArrow = () => (
+        <Icon as={ArrowForwardIcon} boxSize={4} animation={`${arrowAnimation} 1s infinite`}/>
+    );
+
     return ( 
         <Box mt="10px" fontWeight="normal" fontSize="18px" pt="10px" lineHeight={1.8} color="gray.600">
             <Text mb={5}>
@@ -16,7 +34,7 @@ const Introduction = () => {
 
             <HStack alignItems="center" mt={70} fontWeight="bold" _hover={{ textDecoration: "underline"}} color="grey.800" >
                 <a href="/About">learn more about me</a>
-                <Icon as={ArrowForwardIcon} />
+                <AnimatedArrow/>
             </HStack>
         </Box>
     );
