@@ -16,9 +16,13 @@ export default function Navbar() {
   const navStyles = {
     position: "fixed",
     height: "60px",
-    width: "100%",
+    zIndex: "2",
     backdropFilter: "blur(10px)",
-    zIndex: "2"
+    boxShadow: "0 0 10px rgba(128, 128, 128, 0.5)",
+    borderRadius: "40px",
+    p: "32px",
+    mt: "10px",
+    width: "90%",
   }
 
   const iconStyles = {
@@ -35,9 +39,9 @@ export default function Navbar() {
 
 
   return (
-    <Flex as="nav" p="10px" alignItems="center" sx={navStyles}>
-        <Heading as="h1">
-          <Box mx={8} fontSize="35px" color={colorMode === "dark" ? "blue.500" : "blue.500"} transition="color 0.3s ease, font-weight 0.3s" 
+    <Flex sx={navStyles} alignItems="center">
+        <Heading as="h1" ml="20px">
+          <Box mx={8} fontSize="33px" color={colorMode === "dark" ? "blue.500" : "blue.500"} transition="color 0.3s ease, font-weight 0.3s" 
               _hover={{ color: colorMode === "dark" ? "white" : "black"}}>
             <a href="/">Kevin Hu</a>
           </Box>
@@ -65,21 +69,22 @@ export default function Navbar() {
 
         <Spacer />
 
-        <HStack spacing="50px" alignItems="center">
-          <Button variant="ghost" onClick={toggleColorMode}>
+        <HStack alignItems="center">
+          <Button variant="ghost" onClick={toggleColorMode} mr="50px" transition="background-color 0.3s ease" _hover={{ bg: colorMode === 'dark' ? 'gray.800' : 'gray.200' }}>
             {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
           </Button>
-        <Box display="flex" alignItems="center">
-          <a href="https://www.instagram.com/kevinhu04/" style={iconStyles}>
-            <Icon as={FaFacebook} boxSize={6} mr={5} color={colorMode === "dark" ? "white" : "black"} transition="color 0.3s ease" _hover={{ color: 'blue' }}/>
-          </a>
-          <a href="https://www.instagram.com/kevinhu04/" style={iconStyles}>
-            <Icon as={FaTwitter} boxSize={6} mr={5} color={colorMode === "dark" ? "white" : "black"} transition="color 0.3s ease" _hover={{ color: 'skyblue' }} />
-          </a>
-          <a href="https://www.instagram.com/kevinhu04/" style={iconStyles}>
-            <Icon as={FaInstagram} boxSize={6} color={colorMode === "dark" ? "white" : "black"} transition="color 0.3s ease" _hover={{ color: '#FF69B4' }}/>
-          </a>
-        </Box>
+
+          <Box display="flex" alignItems="center" mr="20px">
+            <a href="https://www.instagram.com/kevinhu04/" style={iconStyles}>
+              <Icon as={FaFacebook} boxSize={6} mr={5} color={colorMode === "dark" ? "white" : "black"} transition="color 0.3s ease" _hover={{ color: 'blue' }}/>
+            </a>
+            <a href="https://www.instagram.com/kevinhu04/" style={iconStyles}>
+              <Icon as={FaTwitter} boxSize={6} mr={5} color={colorMode === "dark" ? "white" : "black"} transition="color 0.3s ease" _hover={{ color: 'skyblue' }} />
+            </a>
+            <a href="https://www.instagram.com/kevinhu04/" style={iconStyles}>
+              <Icon as={FaInstagram} boxSize={6} color={colorMode === "dark" ? "white" : "black"} transition="color 0.3s ease" _hover={{ color: '#FF69B4' }}/>
+            </a>
+          </Box>
         </HStack>       
 
     </Flex>
