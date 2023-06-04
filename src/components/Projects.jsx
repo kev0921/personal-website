@@ -2,7 +2,7 @@ import { SimpleGrid, Card, CardHeader, CardBody, CardFooter, Text, Flex, Image, 
 
 const Projects = () => {
     return ( 
-        <SimpleGrid columns={2} mt="80px" spacing={10} zIndex="1">
+        <SimpleGrid columns={2} spacing={10} zIndex="1">
             <Card maxHeight="600px">
                 <CardHeader>
                     <Flex>
@@ -18,6 +18,14 @@ const Projects = () => {
 
                 <CardFooter>
                     <HStack>
+                        <Box borderRadius={10} width="80px" height="40px" bg="gray.100" display="flex" justifyContent="center" alignItems="center">
+                            <Text fontWeight="normal" fontFamily='body' fontSize="13px" color="gray.600">Javascript</Text>
+                        </Box>
+
+                        <Box borderRadius={10} width="80px" height="40px" bg="gray.100" display="flex" justifyContent="center" alignItems="center">
+                            <Text fontWeight="normal" fontFamily='body' fontSize="13px" color="gray.600">Javascript</Text>
+                        </Box>
+
                         <Box borderRadius={10} width="80px" height="40px" bg="gray.100" display="flex" justifyContent="center" alignItems="center">
                             <Text fontWeight="normal" fontFamily='body' fontSize="13px" color="gray.600">Javascript</Text>
                         </Box>
@@ -39,7 +47,19 @@ const Projects = () => {
                 </CardBody>
 
                 <CardFooter>
+                    <HStack>
+                        <Box borderRadius={10} width="80px" height="40px" bg="gray.100" display="flex" justifyContent="center" alignItems="center">
+                            <Text fontWeight="normal" fontFamily='body' fontSize="13px" color="gray.600">Javascript</Text>
+                        </Box>
 
+                        <Box borderRadius={10} width="80px" height="40px" bg="gray.100" display="flex" justifyContent="center" alignItems="center">
+                            <Text fontWeight="normal" fontFamily='body' fontSize="13px" color="gray.600">Javascript</Text>
+                        </Box>
+
+                        <Box borderRadius={10} width="80px" height="40px" bg="gray.100" display="flex" justifyContent="center" alignItems="center">
+                            <Text fontWeight="normal" fontFamily='body' fontSize="13px" color="gray.600">Javascript</Text>
+                        </Box>
+                    </HStack>
                 </CardFooter>
             </Card>
 
@@ -57,7 +77,19 @@ const Projects = () => {
                 </CardBody>
 
                 <CardFooter>
+                    <HStack>
+                        <Box borderRadius={10} width="80px" height="40px" bg="gray.100" display="flex" justifyContent="center" alignItems="center">
+                            <Text fontWeight="normal" fontFamily='body' fontSize="13px" color="gray.600">Javascript</Text>
+                        </Box>
 
+                        <Box borderRadius={10} width="80px" height="40px" bg="gray.100" display="flex" justifyContent="center" alignItems="center">
+                            <Text fontWeight="normal" fontFamily='body' fontSize="13px" color="gray.600">Javascript</Text>
+                        </Box>
+
+                        <Box borderRadius={10} width="80px" height="40px" bg="gray.100" display="flex" justifyContent="center" alignItems="center">
+                            <Text fontWeight="normal" fontFamily='body' fontSize="13px" color="gray.600">Javascript</Text>
+                        </Box>
+                    </HStack>
                 </CardFooter>
             </Card>
 
@@ -75,7 +107,19 @@ const Projects = () => {
                 </CardBody>
 
                 <CardFooter>
+                    <HStack>
+                        <Box borderRadius={10} width="80px" height="40px" bg="gray.100" display="flex" justifyContent="center" alignItems="center">
+                            <Text fontWeight="normal" fontFamily='body' fontSize="13px" color="gray.600">Javascript</Text>
+                        </Box>
 
+                        <Box borderRadius={10} width="80px" height="40px" bg="gray.100" display="flex" justifyContent="center" alignItems="center">
+                            <Text fontWeight="normal" fontFamily='body' fontSize="13px" color="gray.600">Javascript</Text>
+                        </Box>
+
+                        <Box borderRadius={10} width="80px" height="40px" bg="gray.100" display="flex" justifyContent="center" alignItems="center">
+                            <Text fontWeight="normal" fontFamily='body' fontSize="13px" color="gray.600">Javascript</Text>
+                        </Box>
+                    </HStack>
                 </CardFooter>
             </Card>
 

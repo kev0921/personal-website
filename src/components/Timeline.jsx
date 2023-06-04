@@ -62,19 +62,22 @@ const VerticalTimeline = () => {
         title="Web Developer"
         date="Jan 1, 2022 - Jan 1, 2022"
         location="Toronto, Canada"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        description="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." 
       />
       <TimelineItem
         title="General Executive"
         date="February 1, 2022"
         location="New York, USA"
-        description="Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        description="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       />
       <TimelineItem
         title="Volunteer"
         date="March 1, 2022"
         location="London, UK"
-        description="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        description="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
       />
     </Flex>
   );

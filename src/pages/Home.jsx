@@ -9,7 +9,7 @@ export default function Home() {
 
 // TYPING ANIMATION
   const TypingAnimation = () => {
-    const text = "Hi, my name is Kevin and I am a UofT student";
+    const text = "Hey, my name is Kevin and I'm a UofT student.";
     const [typedText, setTypedText] = useState("");
     const [showCursor, setShowCursor] = useState(true);
   
@@ -50,18 +50,21 @@ export default function Home() {
   
 
   return (
-    <Box mt="150px" ml="250px" mr = "250px" p="50px" fontSize="40px" pt="70px"
-    fontWeight="bold">
+    <Box>
+      <Box mt="160px" ml="180px" mr="180px" pt="70px" pb="70px" pl="120px" pr="120px" borderWidth="10px" borderColor="blue.600" borderStyle="double">
+        <Box fontSize="40px" fontWeight="bold">
+          <TypingAnimation/>
+        </Box>
+        <Introduction/>
+      </Box>
 
-      <TypingAnimation/>
-
-      <Introduction/>
-
-      <Box mt="270px">
+      <Box mt="150px" ml="250px" mr="250px" mb="0px" p="50px" fontSize="40px">
         <VerticalTimeline/>
       </Box>
 
-      <Projects/>
+      <Box mt="20px" ml="250px" mr="250px" p="20px" fontSize="40px" fontWeight="bold">
+        <Projects/>
+      </Box>
 
     </Box>
     

@@ -36,10 +36,9 @@ export default function Navbar() {
 
   return (
     <Flex as="nav" p="10px" alignItems="center" sx={navStyles}>
-
         <Heading as="h1">
-          <Box mx={8} fontSize="35px" color={colorMode === "dark" ? "white" : "black"} transition="color 0.3s ease, font-weight 0.3s" 
-              _hover={{ color: colorMode === "dark" ? "blue.500" : "blue.500"}}>
+          <Box mx={8} fontSize="35px" color={colorMode === "dark" ? "blue.500" : "blue.500"} transition="color 0.3s ease, font-weight 0.3s" 
+              _hover={{ color: colorMode === "dark" ? "white" : "black"}}>
             <a href="/">Kevin Hu</a>
           </Box>
         </Heading>
