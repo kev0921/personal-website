@@ -2,8 +2,6 @@ import { SimpleGrid, Box, useColorMode, Text } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
 
 const Introduction = () => {
-    const { colorMode, toggleColorMode } = useColorMode();
-
     return ( 
         <Box mt="10px" fontWeight="normal" fontSize="18px" pt="10px" lineHeight={1.8}>
             <Text mb={5}>

@@ -1,10 +1,17 @@
-import { Flex, Box, Heading, Spacer, HStack, useColorMode, IconButton, Icon, Button, ColorModeScript } from "@chakra-ui/react";
+import { Flex, Box, Heading, Spacer, HStack, useColorMode, IconButton, Icon, Button } from "@chakra-ui/react";
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
+import { Link, useLocation } from "react-router-dom";
 
 export default function Navbar() {
 
   const { colorMode, toggleColorMode } = useColorMode();
+  const location = useLocation();
+
+  const isActiveLink = (path) => {
+    return location.pathname === path;
+  };
+
 
   const navStyles = {
     position: "fixed",
@@ -18,6 +25,14 @@ export default function Navbar() {
     display: 'flex', 
     alignItems: 'center',
   }
+
+  const getLinkColor = (path) => {
+    if (isActiveLink(path)) {
+      return colorMode === "dark" ? (isActiveLink ? "white" : "grey") : (isActiveLink ? "black" : "grey")
+    }
+    return colorMode === "dark" ? "grey" : "grey";
+  };
+
 
   return (
     <Flex as="nav" p="10px" alignItems="center" sx={navStyles}>
@@ -34,18 +49,18 @@ export default function Navbar() {
         <HStack>
           <Flex align="center" spacing="100px">
 
-            <Box mx={8} fontSize="20px" color={colorMode === "dark" ? "white" : "grey"} transition="color 0.3s ease, font-weight 0.3s" 
-            _hover={{ color: colorMode === "dark" ? "grey" : "black"}}>
+            <Box mx={8} fontSize="20px" color={getLinkColor("/")} transition="color 0.3s ease, font-weight 0.3s" 
+            _hover={{ color: colorMode === "dark" ? "white" : "black", fontWeight: "bold"}} fontWeight={isActiveLink("/") ? "bold" : "normal"}>
               <a href="/">Home</a>
             </Box>
 
-            <Box mx={8} fontSize="20px" color={colorMode === "dark" ? "white" : "grey"} transition="color 0.3s ease, font-weight 0.3s" 
-            _hover={{ color: colorMode === "dark" ? "grey" : "black"}}>
+            <Box mx={8} fontSize="20px" color={getLinkColor("/About")} transition="color 0.3s ease, font-weight 0.3s" 
+            _hover={{ color: colorMode === "dark" ? "white" : "black", fontWeight: "bold"}} fontWeight={isActiveLink("/About") ? "bold" : "normal"}>
               <a href="/About">About Me</a>
             </Box>
 
-            <Box mx={8} fontSize="20px" color={colorMode === "dark" ? "white" : "grey"} transition="color 0.3s ease, font-weight 0.3s" 
-            _hover={{ color: colorMode === "dark" ? "grey" : "black"}}>
+            <Box mx={8} fontSize="20px" color={getLinkColor("/Contact")} transition="color 0.3s ease, font-weight 0.3s" 
+            _hover={{ color: colorMode === "dark" ? "white" : "black", fontWeight: "bold"}} fontWeight={isActiveLink("/Contact") ? "bold" : "normal"}>
               <a href="/Contact">Contact</a>
             </Box>
           </Flex>
