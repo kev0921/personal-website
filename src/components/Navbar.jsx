@@ -46,25 +46,23 @@ export default function Navbar() {
 
         <Spacer />
 
-        <HStack>
-          <Flex align="center" spacing="100px">
+        <Flex align="center" spacing="100px">
 
-            <Box mx={8} fontSize="20px" color={getLinkColor("/")} transition="color 0.3s ease, font-weight 0.3s" 
-            _hover={{ color: colorMode === "dark" ? "white" : "black", fontWeight: "bold"}} fontWeight={isActiveLink("/") ? "bold" : "normal"}>
-              <a href="/">Home</a>
-            </Box>
+          <Box mx={8} fontSize="20px" color={getLinkColor("/")} transition="color 0.3s ease, font-weight 0.3s" 
+          _hover={{ color: colorMode === "dark" ? "white" : "black", fontWeight: "bold"}} fontWeight={isActiveLink("/") ? "bold" : "normal"}>
+            <a href="/">Home</a>
+          </Box>
 
-            <Box mx={8} fontSize="20px" color={getLinkColor("/About")} transition="color 0.3s ease, font-weight 0.3s" 
-            _hover={{ color: colorMode === "dark" ? "white" : "black", fontWeight: "bold"}} fontWeight={isActiveLink("/About") ? "bold" : "normal"}>
-              <a href="/About">About Me</a>
-            </Box>
+          <Box mx={8} fontSize="20px" color={getLinkColor("/About")} transition="color 0.3s ease, font-weight 0.3s" 
+          _hover={{ color: colorMode === "dark" ? "white" : "black", fontWeight: "bold"}} fontWeight={isActiveLink("/About") ? "bold" : "normal"}>
+            <a href="/About">About Me</a>
+          </Box>
 
-            <Box mx={8} fontSize="20px" color={getLinkColor("/Contact")} transition="color 0.3s ease, font-weight 0.3s" 
-            _hover={{ color: colorMode === "dark" ? "white" : "black", fontWeight: "bold"}} fontWeight={isActiveLink("/Contact") ? "bold" : "normal"}>
-              <a href="/Contact">Contact</a>
-            </Box>
-          </Flex>
-        </HStack>
+          <Box mx={8} fontSize="20px" color={getLinkColor("/Contact")} transition="color 0.3s ease, font-weight 0.3s" 
+          _hover={{ color: colorMode === "dark" ? "white" : "black", fontWeight: "bold"}} fontWeight={isActiveLink("/Contact") ? "bold" : "normal"}>
+            <a href="/Contact">Contact</a>
+          </Box>
+        </Flex>
 
         <Spacer />
 
