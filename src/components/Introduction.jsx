@@ -4,7 +4,7 @@ import { ArrowForwardIcon } from '@chakra-ui/icons'
 
 const Introduction = () => {
     return ( 
-        <Box mt="10px" fontWeight="normal" fontSize="18px" pt="10px" lineHeight={1.8}>
+        <Box mt="10px" fontWeight="normal" fontSize="18px" pt="10px" lineHeight={1.8} color="gray.600">
             <Text mb={5}>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde delectus hic accusantium earum expedita fugiat. Accusantium rem atque saepe nulla ab ad impedit architecto voluptatem reiciendis. Error molestiae officiis quo!
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
@@ -14,7 +14,7 @@ const Introduction = () => {
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde delectus hic accusantium earum expedita fugiat. Accusantium rem atque saepe nulla ab ad impedit architecto voluptatem reiciendis. Error molestiae officiis quo!
             </Text>
 
-            <HStack alignItems="center" mt={70} fontWeight="bold" _hover={{ textDecoration: "underline"}} >
+            <HStack alignItems="center" mt={70} fontWeight="bold" _hover={{ textDecoration: "underline"}} color="grey.800" >
                 <a href="/About">learn more about me</a>
                 <Icon as={ArrowForwardIcon} />
             </HStack>
