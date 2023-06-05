@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom"
 import Navbar from "../components/Navbar"
+import Footer from "../components/Footer";
 import { Grid, GridItem, useColorMode} from "@chakra-ui/react"
 
 export default function RootLayout() {
@@ -10,9 +11,15 @@ export default function RootLayout() {
       <GridItem colSpan="3" display="flex" justifyContent="center">
         <Navbar bg={colorMode === "dark" ? "rgba(0, 0, 0, 0.7)" : "rgba(255, 255, 255, 0.5)"}/>
       </GridItem>
+
       <GridItem colSpan="3">
         <Outlet/>
       </GridItem>
+      
+      <GridItem colSpan="3">
+        <Footer/>
+      </GridItem>
+
     </Grid>
   )
 }

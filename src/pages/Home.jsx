@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Introduction from "../components/Introduction";
 import VerticalTimeline from "../components/Timeline";
 import Projects from "../components/Projects";
+import Timeline from "../components/TestTimeline.";
 
 export default function Home() {
   const { colorMode, toggleColorMode } = useColorMode();

@@ -21,21 +21,21 @@ const TimelineItem = ({ title, description, date, location }) => {
   };
 
   const descriptionStyles = {
-    color: colorMode === "dark" ? "white" : "gray.600",
+    color: colorMode === "dark" ? "gray.400" : "gray.600",
     fontWeight: "normal",
     fontSize: "20px",
   };
 
   const dateStyles = {
     mt:"12px",
-    color: colorMode === "dark" ? "white" : "gray.600",
+    color: colorMode === "dark" ? "gray.400" : "gray.600",
     fontWeight: "normal",
     fontSize: "15px",
     whiteSpace:"nowrap"
   };
 
   const locationStyles = {
-    color: colorMode === "dark" ? "white" : "gray.600",
+    color: colorMode === "dark" ? "gray.400" : "gray.600",
     fontWeight: "normal",
     fontSize: "12px",
     textAlign: "right"
