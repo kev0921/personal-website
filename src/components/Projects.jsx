@@ -3,7 +3,7 @@ import { SimpleGrid, Card, CardHeader, CardBody, CardFooter, Text, Flex, Image, 
 const Projects = () => {
     return ( 
         <SimpleGrid columns={2} spacing={10} zIndex="1">
-            <Card maxHeight="600px">
+            <Card maxHeight="600px" borderRadius={20} boxShadow={"lg"}>
                 <CardHeader>
                     <Flex>
                         <Text>card header</Text>
@@ -33,7 +33,7 @@ const Projects = () => {
                 </CardFooter>
             </Card>
 
-            <Card maxHeight="600px">
+            <Card maxHeight="600px" borderRadius={20} boxShadow={"lg"}>
                 <CardHeader>
                     <Flex>
                         <Text>card header</Text>
@@ -63,7 +63,7 @@ const Projects = () => {
                 </CardFooter>
             </Card>
 
-            <Card maxHeight="600px">
+            <Card maxHeight="600px" borderRadius={20} boxShadow={"lg"}>
                 <CardHeader>
                     <Flex>
                         <Text>card header</Text>
@@ -93,7 +93,7 @@ const Projects = () => {
                 </CardFooter>
             </Card>
 
-            <Card maxHeight="600px">
+            <Card maxHeight="600px" borderRadius={20} boxShadow={"lg"}>
                 <CardHeader>
                     <Flex>
                         <Text>card header</Text>
