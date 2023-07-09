@@ -8,30 +8,24 @@ export default function About() {
           <Heading>
             About me. 
           </Heading>
-          <Text lineHeight={1.7} mt="10px">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo expedita libero excepturi optio asperiores ut rerum dolor neque velit nam perspiciatis veniam maiores numquam repudiandae natus consequatur, ea aperiam sint?
+
+          <Text lineHeight={1.7} mt="10px" fontSize={18} pt="5px" pb="10px">
+            Hello! My name is Kevin Hu, and I am currently a second year student studying Computer Science at University of Toronto St. George. 
           </Text>
+
+          <Text lineHeight={1.7} mt="10px" fontSize={18} pb="10px">
+            My favourite things to do on my free time is playing basketball and volleyball, going to the gym, going out with friends, running, and watching anime. 
+          </Text>
+
+          <Text lineHeight={1.7} mt="10px" fontSize={18} pb="10px">
+            Here's a list of my top 10 songs {'('}in no particular order{')'}:
+          </Text>
+
         </Box>
 
         <Box>
             <Card maxHeight="700px" borderRadius={20} boxShadow={"lg"}>
-                <Image src="/public/img/luigi.png" alt="Image" minWidth="100%" maxWidth="100%" maxHeight="30%" objectFit="cover" borderRadius="xl"/>
-
-                <CardFooter>
-                    <HStack>
-                        <Box borderRadius={10} width="80px" height="40px" bg="gray.100" display="flex" justifyContent="center" alignItems="center">
-                            <Text fontWeight="normal" fontFamily='body' fontSize="13px" color="gray.600">Javascript</Text>
-                        </Box>
-
-                        <Box borderRadius={10} width="80px" height="40px" bg="gray.100" display="flex" justifyContent="center" alignItems="center">
-                            <Text fontWeight="normal" fontFamily='body' fontSize="13px" color="gray.600">Javascript</Text>
-                        </Box>
-
-                        <Box borderRadius={10} width="80px" height="40px" bg="gray.100" display="flex" justifyContent="center" alignItems="center">
-                            <Text fontWeight="normal" fontFamily='body' fontSize="13px" color="gray.600">Javascript</Text>
-                        </Box>
-                    </HStack>
-                </CardFooter>
+                <Image src="/public/img/Me.jpeg" alt="Image" minWidth="100%" maxWidth="100%" maxHeight="30%" objectFit="cover" borderRadius="xl"/>
             </Card>
         </Box>
       </SimpleGrid>

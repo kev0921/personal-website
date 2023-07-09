@@ -1,4 +1,4 @@
-import { Box, Flex, Text, useColorMode } from "@chakra-ui/react";
+import { Box, Flex, Text, useColorMode, UnorderedList, ListItem } from "@chakra-ui/react";
 
 const TimelineItem = ({ title, description, date, location }) => {
   const { colorMode } = useColorMode();
@@ -45,7 +45,7 @@ const TimelineItem = ({ title, description, date, location }) => {
     <Box sx={itemStyles}>
       <Flex direction="column">
         <Text sx={titleStyles}>{title}</Text>
-        <Text sx={descriptionStyles}>{description}</Text>
+        <UnorderedList sx={descriptionStyles}>{description}</UnorderedList>
       </Flex>
       <Box>
         <Text sx={dateStyles}>{date}</Text>
@@ -60,24 +60,38 @@ const VerticalTimeline = () => {
     <Flex direction="column">
       <TimelineItem
         title="Web Developer"
-        date="Jan 1, 2022 - Jan 1, 2022"
+        date="November 2022 - April 2022"
         location="Toronto, Canada"
-        description="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." 
+        description={
+        <Box>
+          <ListItem>Responsible for creating and maintaining the club’s website using HTML, CSS, JavaScript, Bootstrap, and React.</ListItem>
+          <ListItem>Led the web development team to introduce new components to the website.</ListItem>
+        </Box>
+      } 
       />
       <TimelineItem
         title="General Executive"
-        date="February 1, 2022"
-        location="New York, USA"
-        description="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        date="October 2021 - April 2022"
+        location="Richmond Hill, Canada"
+        description={
+          <Box>
+            <ListItem>Demonstrated robot building procedures and answered questions about Vex robot parts.</ListItem>
+            <ListItem>Organized meetings and assembled power points to teach lesson material relevant to ongoing projects.</ListItem>
+            <ListItem>Planned budgeting with the club presidents and other executives.</ListItem>
+          </Box>
+        } 
       />
       <TimelineItem
         title="Volunteer"
-        date="March 1, 2022"
-        location="London, UK"
-        description="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        date="September 2018 - February 2019"
+        location="Richmond Hill, Canada"
+        description={
+          <Box>
+            <ListItem>Responsible for teaching drills, plays, and participating in interactive activities for my house league team.</ListItem>
+            <ListItem>Analyzed my players’ skills and work ethic to provide constructive criticism and helpful feedback.</ListItem>
+            <ListItem>Played the team coach or referee role during game time.</ListItem>
+          </Box>
+        } 
       />
     </Flex>
   );
