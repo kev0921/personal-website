@@ -25,13 +25,12 @@ const Introduction = () => {
 
     return ( 
         <Box mt="10px" fontWeight="normal" fontSize="18px" pt="10px" lineHeight={1.8} color="gray.600">
-            <Text mb={5} color={colorMode === "dark" ? "gray.500" : "gray.600"}>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde delectus hic accusantium earum expedita fugiat. Accusantium rem atque saepe nulla ab ad impedit architecto voluptatem reiciendis. Error molestiae officiis quo!
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            <Text mb={5} color={colorMode === "dark" ? "gray.500" : "gray.600"} mr="150px">
+                Your friendly neighbourhood software developer and student from UofT. As a relatively new software developer, I spend my days exploring new technologies and frameworks to learn on top of my student responsibilities. 
             </Text>
 
-            <Text color={colorMode === "dark" ? "gray.500" : "gray.600"}>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde delectus hic accusantium earum expedita fugiat. Accusantium rem atque saepe nulla ab ad impedit architecto voluptatem reiciendis. Error molestiae officiis quo!
+            <Text color={colorMode === "dark" ? "gray.500" : "gray.600"} mr="150px">
+                When I am not exploring the vast sea that is computer science, I enjoy my time indulging in my favourite hobbies and rocking out to my favourite artists.
             </Text>
 
             <HStack alignItems="center" mt={70} fontWeight="bold" _hover={{ textDecoration: "underline"}} color={colorMode === "dark" ? "gray.400" : "gray.800"} >
