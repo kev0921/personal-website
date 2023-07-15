@@ -10,6 +10,7 @@ export default function Contact() {
   const [state, handleSubmit] = useForm("mdoropjp");
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
+  const [succeeded, setSucceeded] = useState(false);
 
   function addToast() {
     toast({
@@ -19,7 +20,7 @@ export default function Contact() {
       duration: 9000,
       isClosable: true,
     })
-  }
+  };
 
   useEffect(() => {
     if (state.succeeded) {
@@ -41,7 +42,7 @@ export default function Contact() {
           </Text>
         </Box>
 
-        <Box mt="10" width="100%">
+        <Box mt="10" pb="178px" width="100%">
           <Form ml="0" p="5px" onSubmit={handleSubmit}>
 
             <FormControl mt="10px">

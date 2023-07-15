@@ -1,4 +1,4 @@
-import { Box, Flex, Text, useColorMode, UnorderedList, ListItem } from "@chakra-ui/react";
+import { Box, Flex, Text, useColorMode, UnorderedList, ListItem, useBreakpointValue } from "@chakra-ui/react";
 
 const TimelineItem = ({ title, description, date, location }) => {
   const { colorMode } = useColorMode();
@@ -6,8 +6,8 @@ const TimelineItem = ({ title, description, date, location }) => {
   const itemStyles = {
     borderBottom: "1px solid",
     borderBottomColor: colorMode === "dark" ? "white" : "black",
-    pb: "20px",
-    mb: "20px",
+    pb: [5, 10],
+    mb: [5, 10],
     display: "flex",
     justifyContent: "space-between",
     alignItems: "flex-start",
@@ -16,29 +16,32 @@ const TimelineItem = ({ title, description, date, location }) => {
   const titleStyles = {
     color: colorMode === "dark" ? "white" : "black",
     fontWeight: "bold",
-    mb: "5px",
-    fontSize: "30px"
+    mb: [2, 3],
+    fontSize: [25, 30]
   };
 
   const descriptionStyles = {
     color: colorMode === "dark" ? "gray.400" : "gray.600",
     fontWeight: "normal",
-    fontSize: "20px",
+    fontSize: [15, 20],
   };
 
   const dateStyles = {
-    mt:"12px",
+    mt:[2, 12],
     color: colorMode === "dark" ? "gray.400" : "gray.600",
     fontWeight: "normal",
-    fontSize: "15px",
-    whiteSpace:"nowrap"
+    fontSize: [15, 15],
+    whiteSpace: ["wrap","nowrap"],
+    textAlign: ["right", "right"]
   };
 
   const locationStyles = {
+    mt: [3, 0],
     color: colorMode === "dark" ? "gray.400" : "gray.600",
     fontWeight: "normal",
-    fontSize: "12px",
-    textAlign: "right"
+    fontSize: [12, 12],
+    textAlign: ["right", "right"],
+    whiteSpace: ["wrap","nowrap"]
   };
 
   return (
@@ -48,19 +51,23 @@ const TimelineItem = ({ title, description, date, location }) => {
         <UnorderedList sx={descriptionStyles}>{description}</UnorderedList>
       </Flex>
       <Box>
-        <Text sx={dateStyles}>{date}</Text>
-        <Text sx={locationStyles}>{location}</Text>
+        <Text ml={[4, 10]} sx={dateStyles}>{date}</Text>
+        <Text ml={[4, 10]} sx={locationStyles}>{location}</Text>
       </Box>
     </Box>
   );
 };
 
+
 const VerticalTimeline = () => {
+
+  const isSmallScreen = useBreakpointValue({ base: true, md: false });
+
   return (
     <Flex direction="column">
       <TimelineItem
         title="Web Developer"
-        date="November 2022 - April 2022"
+        date={isSmallScreen ? "2022" : "Nov 2022 - Apr 2022"}
         location="Toronto, Canada"
         description={
         <Box>
@@ -71,7 +78,7 @@ const VerticalTimeline = () => {
       />
       <TimelineItem
         title="General Executive"
-        date="October 2021 - April 2022"
+        date={isSmallScreen ? "2021-2022" : "Oct 2021 - Apr 2022"}
         location="Richmond Hill, Canada"
         description={
           <Box>
@@ -83,7 +90,7 @@ const VerticalTimeline = () => {
       />
       <TimelineItem
         title="Volunteer"
-        date="September 2018 - February 2019"
+        date={isSmallScreen ? "2018-2019" : "Sept 2018 - Feb 2019"}
         location="Richmond Hill, Canada"
         description={
           <Box>

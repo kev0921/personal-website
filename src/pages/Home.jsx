@@ -1,4 +1,4 @@
-import { SimpleGrid, Box, useColorMode } from "@chakra-ui/react";
+import { SimpleGrid, Box, useColorMode, Heading, VStack } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
 import Introduction from "../components/Introduction";
 import VerticalTimeline from "../components/Timeline";
@@ -51,23 +51,24 @@ export default function Home() {
   
 
   return (
-    <Box>
-      <Box mt="160px" ml="180px" mr="180px" pt="70px" pb="70px" pl="120px" pr="120px" borderWidth="10px" borderColor="blue.600" borderStyle="double">
-        <Box fontSize="40px" fontWeight="bold">
+    <VStack spacing={6} px={[0, 2, 4]} mt={[4, 40]}>
+      <Box maxW="70%" borderWidth="8px" borderColor="blue.600" p={[6, 8, 20]} borderStyle="double">
+        <Box fontSize="40px" fontWeight="bold" maxW="80%">
           <TypingAnimation/>
         </Box>
         <Introduction/>
       </Box>
 
-      <Box mt="150px" ml="250px" mr="250px" mb="0px" p="50px" fontSize="40px">
+      <Heading ml="0" mt="5rem" color="blue.600" textDecoration="none" fontSize={[45, 50, 50]} mb="">Experiences</Heading>
+      <Box  ml={[0, 250]} mr={[0, 250]} mt={[5, 0]} mb="0rem" p={[0, 50]} maxW="80%">
         <VerticalTimeline/>
       </Box>
 
-      <Box mt="20px" ml="250px" mr="250px" p="20px" fontSize="40px" fontWeight="bold">
+      <Box mt="1rem" ml={[0, 250]} mr={[0, 250]} p="1rem" maxW="95%">
         <Projects/>
       </Box>
 
-    </Box>
+    </VStack>
     
   )
 }

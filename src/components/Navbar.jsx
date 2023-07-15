@@ -2,6 +2,8 @@ import { Flex, Box, Heading, Spacer, HStack, useColorMode, IconButton, Icon, But
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { Link, useLocation } from "react-router-dom";
+import { DiGithubBadge } from "react-icons/di";
+import { BsLinkedin } from "react-icons/bs"
 
 export default function Navbar() {
 
@@ -53,7 +55,7 @@ export default function Navbar() {
 
           <Box mx={8} fontSize="20px" color={getLinkColor("/")} transition="color 0.3s ease, font-weight 0.3s" 
           _hover={{ color: colorMode === "dark" ? "white" : "black", fontWeight: "bold"}} fontWeight={isActiveLink("/") ? "bold" : "normal"}>
-            <a href="/">Home</a>
+            <a href="/">Portfolio</a>
           </Box>
 
           <Box mx={8} fontSize="20px" color={getLinkColor("/About")} transition="color 0.3s ease, font-weight 0.3s" 
@@ -75,14 +77,14 @@ export default function Navbar() {
           </Button>
 
           <Box display="flex" alignItems="center" mr="20px">
-            <a href="https://www.instagram.com/kevinhu04/" style={iconStyles}>
-              <Icon as={FaFacebook} boxSize={6} mr={5} color={colorMode === "dark" ? "white" : "black"} transition="color 0.3s ease" _hover={{ color: 'blue' }}/>
+            <a href="https://www.linkedin.com/in/kevinhu04/" style={iconStyles}>
+              <Icon as={BsLinkedin} boxSize={6} mr={5} color='blue.500' transition="color 0.3s ease" _hover={{ color: colorMode === "dark" ? "white" : "black" }}/>
+            </a>
+            <a href="https://github.com/kev0921" style={iconStyles}>
+              <Icon as={DiGithubBadge} boxSize={10} mr={5} color='blue.500' transition="color 0.3s ease" _hover={{ color: colorMode === "dark" ? "white" : "black" }} />
             </a>
             <a href="https://www.instagram.com/kevinhu04/" style={iconStyles}>
-              <Icon as={FaTwitter} boxSize={6} mr={5} color={colorMode === "dark" ? "white" : "black"} transition="color 0.3s ease" _hover={{ color: 'skyblue' }} />
-            </a>
-            <a href="https://www.instagram.com/kevinhu04/" style={iconStyles}>
-              <Icon as={FaInstagram} boxSize={6} color={colorMode === "dark" ? "white" : "black"} transition="color 0.3s ease" _hover={{ color: '#FF69B4' }}/>
+              <Icon as={FaInstagram} boxSize={7} color='blue.500' transition="color 0.3s ease" _hover={{ color: colorMode === "dark" ? "white" : "black" }}/>
             </a>
           </Box>
         </HStack>       
