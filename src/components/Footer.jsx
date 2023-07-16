@@ -13,31 +13,31 @@ const Footer = () => {
       }
 
     return ( 
-        <HStack alignContent="center" p="25px" borderTop="1px" borderColor="gray.300" mt="50px"
-        borderStyle="solid" ml="200px" mr="200px">
-            <Box whitespace="nowrap" mx={8} fontWeignt="bold" fontSize="25px" color={colorMode === "dark" ? "blue.500" : "blue.500"} transition="color 0.3s ease, font-weight 0.3s" 
-                _hover={{ color: colorMode === "dark" ? "white" : "black"}} mr="250px" ml="88px">
-                <Heading alignItems="center" fontSize="30px">
+        <HStack alignContent="center" p={["5px", "25px"]} borderTop="1px" borderColor="gray.300" mt={["30px","50px"]}
+        borderStyle="solid" ml={["2px", "200px"]} mr={["2px", "200px"]}>
+            <Box whitespace="nowrap" mx={8} fontWeignt="bold" color={colorMode === "dark" ? "blue.500" : "blue.500"} transition="color 0.3s ease, font-weight 0.3s" 
+                _hover={{ color: colorMode === "dark" ? "white" : "black"}} mr={["5%", "27%"]} ml={["5%", "5%"]}>
+                <Text textAlign="left" alignItems="center" fontWeight="bold" fontSize={["20px", "30px"]}>
                     <a href="/">Kevin Hu</a>
-                </Heading>
+                </Text>
             </Box>
 
-            <Text fontFamily="initial" fontSize="18px" mr="250px">
+            <Text textAlign="center" fontFamily="initial" fontSize={["14px", "18px"]} mr={["5%", "27%"]}>
                 Created by me :{")"}
             </Text>
 
             <Box display="flex" alignItems="center">
 
                 <a href="https://www.linkedin.com/in/kevinhu04/" style={iconStyles}>
-                    <Icon as={BsLinkedin} boxSize={6} mr={5} color='blue.500' transition="color 0.3s ease" _hover={{ color: colorMode === "dark" ? "white" : "black" }}/>
+                    <Icon as={BsLinkedin} boxSize={6} mr={[2.5, 5]} color='blue.500' transition="color 0.3s ease" _hover={{ color: colorMode === "dark" ? "white" : "black" }}/>
                 </a>
 
                 <a href="https://github.com/kev0921" style={iconStyles}>
-                    <Icon as={DiGithubBadge} boxSize={10} mr={5} color='blue.500' transition="color 0.3s ease" _hover={{ color: colorMode === "dark" ? "white" : "black" }} />
+                    <Icon as={DiGithubBadge} boxSize={10} mr={[2.5, 5]} color='blue.500' transition="color 0.3s ease" _hover={{ color: colorMode === "dark" ? "white" : "black" }} />
                 </a>
 
                 <a href="https://www.instagram.com/kevinhu04/" style={iconStyles}>
-                    <Icon as={FaInstagram} boxSize={7} color='blue.500' transition="color 0.3s ease" _hover={{ color: colorMode === "dark" ? "white" : "black" }}/>
+                    <Icon as={FaInstagram} boxSize={7} mr={[2.5, 0]}color='blue.500' transition="color 0.3s ease" _hover={{ color: colorMode === "dark" ? "white" : "black" }}/>
                 </a>
 
           </Box>

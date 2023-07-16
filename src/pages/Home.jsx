@@ -52,19 +52,22 @@ export default function Home() {
 
   return (
     <VStack spacing={6} px={[0, 2, 4]} mt={[4, 40]}>
-      <Box maxW="70%" borderWidth="8px" borderColor="blue.600" p={[6, 8, 20]} borderStyle="double">
-        <Box fontSize="40px" fontWeight="bold" maxW="80%">
+      <Box mt={["90px", "0px"]} maxW={["95%", "70%"]} borderWidth="8px" borderColor="blue.600" p={[6, 8, 20]} borderStyle="double">
+        <Box fontSize={["30px", "40px"]} fontWeight="bold" minW={["95%", "80%"]}>
           <TypingAnimation/>
         </Box>
         <Introduction/>
       </Box>
 
-      <Heading ml="0" mt="5rem" color="blue.600" textDecoration="none" fontSize={[45, 50, 50]} mb="">Experiences</Heading>
-      <Box  ml={[0, 250]} mr={[0, 250]} mt={[5, 0]} mb="0rem" p={[0, 50]} maxW="80%">
+      <Box ml={[0, 0, 0]} mr={["90px", "85px", 660]} mb={[0, 0, "20px"]} textAlign="left">
+        <Heading mt={["250px", "5rem"]} color="blue.600" fontSize={[45, 50, 50]}>Experiences</Heading>
+      </Box>
+
+      <Box  ml={[0, 0, 250]} mr={[0, 0, 250]} mt={["0px", "0px", "0px"]} mb="0rem" pl={[0, 0, "50px"]} pr={[0, 0, "50px"]} maxW="80%">
         <VerticalTimeline/>
       </Box>
 
-      <Box mt="1rem" ml={[0, 250]} mr={[0, 250]} p="1rem" maxW="95%">
+      <Box mt="1rem" ml={[0, 0, 250]} mr={[0, 0, 250]} p="1rem" maxW="95%">
         <Projects/>
       </Box>
 
