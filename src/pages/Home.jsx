@@ -60,7 +60,7 @@ export default function Home() {
       </Box>
 
       <Box ml={[0, 0, 0]} mr={["90px", "85px", 660]} mb={[0, 0, "20px"]} textAlign="left">
-        <Heading mt={["250px", "5rem"]} color="blue.600" fontSize={[45, 50, 50]}>Experiences</Heading>
+        <Heading mt={["250px", "150px"]} color="blue.600" fontSize={[45, 50, 50]}>Experiences</Heading>
       </Box>
 
       <Box  ml={[0, 0, 250]} mr={[0, 0, 250]} mt={["0px", "0px", "0px"]} mb="0rem" pl={[0, 0, "50px"]} pr={[0, 0, "50px"]} maxW="80%">
