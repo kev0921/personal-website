@@ -1,10 +1,21 @@
-import { VStack, Box, Flex, Spacer, Card, Image, CardFooter, HStack, Text, Heading, SimpleGrid, List, ListItem, ListIcon } from "@chakra-ui/react";
+import { VStack, Box, Flex, Spacer, Card, Image, CardFooter, HStack, Text, Heading, SimpleGrid, List, ListItem, ListIcon, extendTheme } from "@chakra-ui/react";
 import {  BsFillFileEarmarkMusicFill } from "react-icons/bs";
 
 export default function About() {
+
+  const breakpoints = {
+    sm: '320px',
+    md: '768px',
+    lg: '960px',
+    xl: '1200px',
+    '2xl': '1536px',
+  }
+
+  const theme = extendTheme({ breakpoints })
+
   return (
     <VStack ml={["20px", "200px"]} mr={["20px", "200px"]} mt="120px">
-      <SimpleGrid columns={[1, 2]} spacing={10}>
+      <SimpleGrid columns={[1, 1, 2]} spacing={10}>
         <Box>
           <Heading>
             About me. 
@@ -69,8 +80,8 @@ export default function About() {
         </Box>
 
         <Box>
-            <Card maxHeight="700px" borderRadius={20} boxShadow={"lg"} transition="box-shadow 0.3s ease-in-out">
-                <Image src="/public/img/Me.jpeg" alt="Image" minWidth="100%" maxWidth="100%" maxHeight="30%" objectFit="cover" borderRadius="xl"/>
+            <Card borderRadius={20} boxShadow={"lg"} transition="box-shadow 0.3s ease-in-out">
+                <Image src="/public/img/Me.jpeg" alt="Image" minWidth="100%" maxWidth="100%" maxHeight="700px" objectFit="cover" borderRadius="xl"/>
             </Card>
         </Box>
       </SimpleGrid>
