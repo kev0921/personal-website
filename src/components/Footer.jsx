@@ -14,7 +14,7 @@ const Footer = () => {
 
     return ( 
         <Flex alignItems="center" p={["5px", "25px"]} borderTop="1px" borderColor="gray.300" mt={["30px","50px"]}
-        borderStyle="solid" ml={["0%", "12%"]} mr={["0%", "12%"]} width="100%">
+        borderStyle="solid" ml={["0%", "12%"]} mr={["0%", "12%"]}>
             <Box whitespace="nowrap" mx={8} fontWeight="bold" color={colorMode === "dark" ? "blue.500" : "blue.500"} transition="color 0.3s ease, font-weight 0.3s" 
                 _hover={{ color: colorMode === "dark" ? "white" : "black"}}>
                 <Text textAlign="left" fontWeight="bold" fontSize={["20px", "30px"]}>
