@@ -1,4 +1,4 @@
-import { Flex, Box, Heading, Spacer, HStack, useColorMode, IconButton, Icon, Button, useMediaQuery, Text } from "@chakra-ui/react";
+import { Flex, Box, Heading, Spacer, HStack, useColorMode, IconButton, Icon, Button, useMediaQuery, Text,  Menu, MenuButton, MenuList, MenuItem, MenuItemOption, MenuGroup, MenuOptionGroup, MenuDivider, } from "@chakra-ui/react";
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { Link, useLocation } from "react-router-dom";
@@ -42,15 +42,35 @@ export default function Navbar() {
     <Flex sx={navStyles} alignItems="center">
       {/* Mobile Navbar */}
       {!isLargerThan768 && (
-        <Flex alignItems="center">
+        <Flex alignItems="center" width="100%">
           <Heading ml="-20px" pl="0px" pr="45px">
             <Box mx={8} fontSize="33px" color={colorMode === "dark" ? "blue.500" : "blue.500"} transition="color 0.3s ease, font-weight 0.3s" 
               _hover={{ color: colorMode === "dark" ? "white" : "black"}}>
               <a href="/">Kevin Hu</a>
             </Box>
           </Heading>
-          <IconButton ml="20px" bg="none" aria-label="Toggle Navigation" icon={<HamburgerIcon />} display={{ base: "flex", md: "none"}}
-          />
+
+          <Spacer />
+
+          <Menu>
+            <MenuButton
+              as={IconButton}
+              aria-label='Options'
+              icon={<HamburgerIcon />}
+              variant='outline'
+            />
+            <MenuList>
+              <MenuItem as="a" href="/">
+                Profile
+              </MenuItem>
+              <MenuItem as="a" href="/About">
+                About Me
+              </MenuItem>
+              <MenuItem as="a" href="/Contact">
+                Contact
+              </MenuItem>
+            </MenuList>
+          </Menu>
         </Flex>
       )}
 
