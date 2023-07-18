@@ -13,20 +13,24 @@ const Footer = () => {
       }
 
     return ( 
-        <HStack alignContent="center" p={["5px", "25px"]} borderTop="1px" borderColor="gray.300" mt={["30px","50px"]}
-        borderStyle="solid" ml={["2px", "200px"]} mr={["2px", "200px"]}>
+        <Flex alignItems="center" p={["5px", "25px"]} borderTop="1px" borderColor="gray.300" mt={["30px","50px"]}
+        borderStyle="solid" ml={["0%", "12%"]} mr={["0%", "12%"]} width="100%">
             <Box whitespace="nowrap" mx={8} fontWeight="bold" color={colorMode === "dark" ? "blue.500" : "blue.500"} transition="color 0.3s ease, font-weight 0.3s" 
-                _hover={{ color: colorMode === "dark" ? "white" : "black"}} mr={["5%", "27%"]} ml={["5%", "5%"]}>
-                <Text textAlign="left" alignItems="center" fontWeight="bold" fontSize={["20px", "30px"]}>
+                _hover={{ color: colorMode === "dark" ? "white" : "black"}}>
+                <Text textAlign="left" fontWeight="bold" fontSize={["20px", "30px"]}>
                     <a href="/">Kevin Hu</a>
                 </Text>
             </Box>
 
-            <Text textAlign="center" fontFamily="initial" fontSize={["14px", "18px"]} mr={["5%", "27%"]}>
+            <Spacer/>
+
+            <Text textAlign="center" fontFamily="initial" fontSize={["0px", "18px"]}>
                 Created by me :{")"}
             </Text>
 
-            <Box display="flex" alignItems="center">
+            <Spacer/>
+
+            <Flex>
 
                 <a href="https://www.linkedin.com/in/kevinhu04/" style={iconStyles}>
                     <Icon as={BsLinkedin} boxSize={6} mr={[2.5, 5]} color='blue.500' transition="color 0.3s ease" _hover={{ color: colorMode === "dark" ? "white" : "black" }}/>
@@ -40,8 +44,8 @@ const Footer = () => {
                     <Icon as={FaInstagram} boxSize={7} mr={[2.5, 0]}color='blue.500' transition="color 0.3s ease" _hover={{ color: colorMode === "dark" ? "white" : "black" }}/>
                 </a>
 
-          </Box>
-        </HStack>
+          </Flex>
+        </Flex>
      );
 }
  
