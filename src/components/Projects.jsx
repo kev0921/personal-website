@@ -60,7 +60,7 @@ const Projects = () => {
 
                 <Card maxHeight="600px" borderRadius={20} boxShadow={"lg"}>
 
-                    <Image src="/dist/img/PersonalWebsite.png" alt="Image" minWidth="100%" maxWidth="100%" maxHeight="50%" objectFit="cover" borderTopRadius="xl" mx="auto"/>
+                    <Image src="/img/PersonalWebsite.png" alt="Image" minWidth="100%" maxWidth="100%" maxHeight="50%" objectFit="cover" borderTopRadius="xl" mx="auto"/>
 
                     <CardBody fontWeight="normal" fontSize={[17, 20]} color="gray.600">
                         <Stack spacing="2.5">
@@ -102,7 +102,7 @@ const Projects = () => {
 
                 <Card maxHeight="600px" borderRadius={20} boxShadow={"lg"}>
 
-                    <Image src="dist/img/MazeSolverRobot.png" alt="Image" minWidth="100%" maxWidth="100%" maxHeight="50%" objectFit="cover" borderTopRadius="xl" mx="auto"/>
+                    <Image src="/img/MazeSolverRobot.png" alt="Image" minWidth="100%" maxWidth="100%" maxHeight="50%" objectFit="cover" borderTopRadius="xl" mx="auto"/>
 
                     <CardBody fontWeight="normal" fontSize={[17, 20]} color="gray.600">
                         <Stack spacing="2.5">
@@ -133,7 +133,7 @@ const Projects = () => {
 
                 <Card maxHeight="600px" borderRadius={20} boxShadow={"lg"}>
 
-                    <Image src="dist/img/ClubWebsite.png" alt="Image" minWidth="100%" maxWidth="100%" maxHeight="50%" objectFit="cover" borderTopRadius="xl" mx="auto"/>
+                    <Image src="/img/ClubWebsite.png" alt="Image" minWidth="100%" maxWidth="100%" maxHeight="50%" objectFit="cover" borderTopRadius="xl" mx="auto"/>
 
                     <CardBody fontWeight="normal" fontSize={[17, 20]} color="gray.600">
                         <Stack spacing="2.5">
@@ -183,7 +183,7 @@ const Projects = () => {
             </SimpleGrid>
             
             <Heading mt="60px" mb="5px" size='lg'>My resume:</Heading>
-            <a href="dist/resume.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
                 <Button colorScheme="blue">View PDF</Button>
             </a>
 

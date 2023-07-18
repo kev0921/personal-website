@@ -81,7 +81,7 @@ export default function About() {
 
         <Box>
             <Card borderRadius={20} boxShadow={"lg"} transition="box-shadow 0.3s ease-in-out">
-                <Image src="dist/img/Me.jpeg" alt="Image" minWidth="100%" maxWidth="100%" maxHeight="700px" objectFit="cover" borderRadius="xl"/>
+                <Image src="/img/Me.jpeg" alt="Image" minWidth="100%" maxWidth="100%" maxHeight="700px" objectFit="cover" borderRadius="xl"/>
             </Card>
         </Box>
       </SimpleGrid>
