@@ -59,15 +59,13 @@ export default function Home() {
         <Introduction/>
       </Box>
 
-      <Box ml={[0, 0, 0]} mr={["90px", "85px", 660]} mb={[0, 0, "20px"]} textAlign="left">
-        <Heading mt={["250px", "150px"]} color="blue.600" fontSize={[45, 50, 50]}>Experiences</Heading>
-      </Box>
+      <Heading alignSelf="flex-start" ml={["5%", "15%"]} mr={["auto", "auto"]} mt={["250px", "150px"]} color="blue.600" fontSize={[45, 50, 50]}>Experiences</Heading>
 
-      <Box  ml={[0, 0, 250]} mr={[0, 0, 250]} mt={["0px", "0px", "0px"]} mb="0rem" pl={[0, 0, "50px"]} pr={[0, 0, "50px"]} maxW="80%">
+      <Box  ml={[0, 0, "15%"]} mr={[0, 0, "15%"]} mt={["5%", "0px", "1.5%"]} pl={["7%", "1rem"]} pr={["7%", "1rem"]}> 
         <VerticalTimeline/>
       </Box>
 
-      <Box mt="1rem" ml={[0, 0, 250]} mr={[0, 0, 250]} p="1rem" maxW="95%">
+      <Box mt="1rem" ml={[0, 0, "15%"]} mr={[0, 0, "15%"]} p="1rem" maxW="95%">
         <Projects/>
       </Box>
 

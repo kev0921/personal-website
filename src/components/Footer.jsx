@@ -30,21 +30,25 @@ const Footer = () => {
 
             <Spacer/>
 
-            <Flex>
+            <Flex alignItems="center">
+                <Flex alignItems="center" mr={[2.5, 5]}>
+                    <a href="https://www.linkedin.com/in/kevinhu04/" style={iconStyles}>
+                    <Icon as={BsLinkedin} boxSize={6} color="blue.500" transition="color 0.3s ease" _hover={{ color: colorMode === "dark" ? "white" : "black" }} />
+                    </a>
+                </Flex>
 
-                <a href="https://www.linkedin.com/in/kevinhu04/" style={iconStyles}>
-                    <Icon as={BsLinkedin} boxSize={6} mr={[2.5, 5]} color='blue.500' transition="color 0.3s ease" _hover={{ color: colorMode === "dark" ? "white" : "black" }}/>
-                </a>
+                <Flex alignItems="center" mr={[2.5, 5]}>
+                    <a href="https://github.com/kev0921" style={iconStyles}>
+                    <Icon as={DiGithubBadge} boxSize={10} color="blue.500" transition="color 0.3s ease" _hover={{ color: colorMode === "dark" ? "white" : "black" }} />
+                    </a>
+                </Flex>
 
-                <a href="https://github.com/kev0921" style={iconStyles}>
-                    <Icon as={DiGithubBadge} boxSize={10} mr={[2.5, 5]} color='blue.500' transition="color 0.3s ease" _hover={{ color: colorMode === "dark" ? "white" : "black" }} />
-                </a>
-
-                <a href="https://www.instagram.com/kevinhu04/" style={iconStyles}>
-                    <Icon as={FaInstagram} boxSize={7} mr={[2.5, 0]}color='blue.500' transition="color 0.3s ease" _hover={{ color: colorMode === "dark" ? "white" : "black" }}/>
-                </a>
-
-          </Flex>
+                <Flex alignItems="center" mr={[2.5, 5]}>
+                    <a href="https://www.instagram.com/kevinhu04/" style={iconStyles}>
+                    <Icon as={FaInstagram} boxSize={7} color="blue.500" transition="color 0.3s ease" _hover={{ color: colorMode === "dark" ? "white" : "black" }} />
+                    </a>
+                </Flex>
+            </Flex>
         </Flex>
      );
 }

@@ -8,9 +8,7 @@ const TimelineItem = ({ title, description, date, location }) => {
     borderBottomColor: colorMode === "dark" ? "white" : "black",
     pb: [5, 10],
     mb: [5, 10],
-    display: "flex",
     justifyContent: "space-between",
-    alignItems: "flex-start",
   };
 
   const titleStyles = {
@@ -45,7 +43,7 @@ const TimelineItem = ({ title, description, date, location }) => {
   };
 
   return (
-    <Box sx={itemStyles}>
+    <Flex sx={itemStyles}>
       <Flex direction="column">
         <Text sx={titleStyles}>{title}</Text>
         <UnorderedList sx={descriptionStyles}>{description}</UnorderedList>
@@ -54,7 +52,7 @@ const TimelineItem = ({ title, description, date, location }) => {
         <Text ml={[4, 10]} sx={dateStyles}>{date}</Text>
         <Text ml={[4, 10]} sx={locationStyles}>{location}</Text>
       </Box>
-    </Box>
+    </Flex>
   );
 };
 
@@ -64,13 +62,13 @@ const VerticalTimeline = () => {
   const isSmallScreen = useBreakpointValue({ base: true, md: false });
 
   return (
-    <Flex direction="column">
+    <Flex direction="column" minW="100%">
       <TimelineItem
         title="Web Developer"
         date={isSmallScreen ? "2022" : "Nov 2022 - Apr 2022"}
         location="Toronto, Canada"
         description={
-        <Box>
+        <Box minW="100%">
           <ListItem>Responsible for creating and maintaining the club’s website using HTML, CSS, JavaScript, Bootstrap, and React.</ListItem>
           <ListItem>Led the web development team to introduce new components to the website.</ListItem>
         </Box>
@@ -81,7 +79,7 @@ const VerticalTimeline = () => {
         date={isSmallScreen ? "2021-2022" : "Oct 2021 - Apr 2022"}
         location="Richmond Hill, Canada"
         description={
-          <Box>
+          <Box minW="100%">
             <ListItem>Demonstrated robot building procedures and answered questions about Vex robot parts.</ListItem>
             <ListItem>Organized meetings and assembled power points to teach lesson material relevant to ongoing projects.</ListItem>
             <ListItem>Planned budgeting with the club presidents and other executives.</ListItem>
