@@ -15,7 +15,7 @@ const Footer = () => {
     return ( 
         <HStack alignContent="center" p={["5px", "25px"]} borderTop="1px" borderColor="gray.300" mt={["30px","50px"]}
         borderStyle="solid" ml={["2px", "200px"]} mr={["2px", "200px"]}>
-            <Box whitespace="nowrap" mx={8} fontWeignt="bold" color={colorMode === "dark" ? "blue.500" : "blue.500"} transition="color 0.3s ease, font-weight 0.3s" 
+            <Box whitespace="nowrap" mx={8} fontWeight="bold" color={colorMode === "dark" ? "blue.500" : "blue.500"} transition="color 0.3s ease, font-weight 0.3s" 
                 _hover={{ color: colorMode === "dark" ? "white" : "black"}} mr={["5%", "27%"]} ml={["5%", "5%"]}>
                 <Text textAlign="left" alignItems="center" fontWeight="bold" fontSize={["20px", "30px"]}>
                     <a href="/">Kevin Hu</a>
