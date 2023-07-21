@@ -10,7 +10,7 @@ const Projects = () => {
         <Box>
             <Heading color="blue.600" textDecoration="none" fontSize="45px" mb="50px">Projects and Resume</Heading>
 
-            <SimpleGrid columns={[1, 2]} spacing={10} zIndex="1">
+            <SimpleGrid columns={[1, 1, 2]} spacing={10} zIndex="1">
 
                 <Card minHeight="550px" maxHeight="600px" borderRadius={20} boxShadow={"lg"}>
 

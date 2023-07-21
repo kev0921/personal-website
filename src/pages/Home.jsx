@@ -53,15 +53,15 @@ export default function Home() {
   return (
     <VStack spacing={6} px={[0, 2, 4]} mt={[4, 40]}>
       <Box mt={["90px", "0px"]} maxW={["95%", "70%"]} borderWidth="8px" borderColor="blue.600" p={[6, 8, 20]} borderStyle="double">
-        <Box fontSize={["30px", "40px"]} fontWeight="bold" minW={["95%", "80%"]}>
+        <Box fontSize={["30px", "35px", "40px"]} fontWeight="bold" minW={["95%", "80%"]}>
           <TypingAnimation/>
         </Box>
         <Introduction/>
       </Box>
 
-      <Heading alignSelf="flex-start" ml={["5%", "15%"]} mr={["auto", "auto"]} mt={["250px", "150px"]} color="blue.600" fontSize={[45, 50, 50]}>Experiences</Heading>
+      <Heading alignSelf="flex-start" ml={["5%", "5%", "15%"]} mr={["auto", "auto"]} mt={["250px", "150px"]} color="blue.600" fontSize={[45, 50, 50]}>Experiences</Heading>
 
-      <Box  ml={[0, 0, "15%"]} mr={[0, 0, "15%"]} mt={["5%", "0px", "1.5%"]} pl={["7%", "1rem"]} pr={["7%", "1rem"]}> 
+      <Box  ml={[0, "7%", "15%"]} mr={[0, "7%", "15%"]} mt={["5%", "0px", "1.5%"]} pl={["7%", "1rem"]} pr={["7%", "1rem"]}> 
         <VerticalTimeline/>
       </Box>
 

@@ -31,7 +31,7 @@ export default function Contact() {
   }, [state.succeeded]);
 
   return (
-    <SimpleGrid ml={["20px", "200px"]} mr={["20px", "200px"]} mt="120px" columns={[1, 2]}>
+    <SimpleGrid ml={["20px", "10%", "200px"]} mr={["20px", "0%","200px"]} mt="120px" columns={[1, 2]}>
       <VStack>
         <Box width="100%">
           <Heading>

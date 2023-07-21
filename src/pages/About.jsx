@@ -14,7 +14,7 @@ export default function About() {
   const theme = extendTheme({ breakpoints })
 
   return (
-    <VStack ml={["20px", "200px"]} mr={["20px", "200px"]} mt="120px">
+    <VStack ml={["20px", "15%","200px"]} mr={["20px", "15%","200px"]} mt="120px">
       <SimpleGrid columns={[1, 1, 2]} spacing={10}>
         <Box>
           <Heading>
