@@ -52,8 +52,8 @@ export default function Home() {
 
   return (
     <VStack spacing={6} px={[0, 2, 4]} mt={[4, 40]}>
-      <Box mt={["90px", "0px"]} maxW={["95%", "70%"]} borderWidth="8px" borderColor="blue.600" p={[6, 8, 20]} borderStyle="double">
-        <Box fontSize={["30px", "35px", "40px"]} fontWeight="bold" minW={["95%", "80%"]}>
+      <Box mt={["90px", "0px"]} maxW={["95%", "75%"]} borderWidth="8px" borderColor="blue.600" p={[6, 8, "80px"]} borderStyle="double">
+        <Box fontSize={["30px", "35px", "40px"]} fontWeight="bold" minW={["95%", "85%"]}>
           <TypingAnimation/>
         </Box>
         <Introduction/>
