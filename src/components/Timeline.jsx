@@ -63,8 +63,9 @@ const VerticalTimeline = () => {
 
   return (
     <Flex direction="column" minW="100%">
+      
       <TimelineItem
-        title="Web Developer"
+        title="Web Developer - RCHRA"
         date={isSmallScreen ? "2022" : "Nov 2022 - Apr 2022"}
         location="Toronto, Canada"
         description={
@@ -75,7 +76,7 @@ const VerticalTimeline = () => {
       } 
       />
       <TimelineItem
-        title="General Executive"
+        title="General Executive - RHHS Robotics"
         date={isSmallScreen ? "2021-2022" : "Oct 2021 - Apr 2022"}
         location="Richmond Hill, Canada"
         description={
@@ -87,7 +88,7 @@ const VerticalTimeline = () => {
         } 
       />
       <TimelineItem
-        title="Volunteer"
+        title="Volunteer - Trillium Woods"
         date={isSmallScreen ? "2018-2019" : "Sept 2018 - Feb 2019"}
         location="Richmond Hill, Canada"
         description={
