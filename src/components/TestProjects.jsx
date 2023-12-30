@@ -85,37 +85,33 @@ const Projects = () => {
   const { colorMode } = useColorMode();
   const projects = [
     {
-      title: 'Peterpitch',
-      desc: `Peterpitch is a tool that takes the fun in your company seriously
-          and turns your meetings into real performance boosters. With Peter
-          Pitch, you round up the pack of employees and turn even the shakiest
-          puppies into true wolves.`,
-      tech: 'ruby, rails, react, javascript',
+      title: '',
+      desc: ``,
+      tech: '',
       image_url: peterpitch_img
     },
     {
-      title: 'Notch',
-      desc: `This is a project management website for design and procurement teams. It helps to collaborate and manage all of your floor plans in one place, writing specs, budgeting and timelines.`,
-      tech: 'ruby, rails, javascript',
+      title: '',
+      desc: ``,
+      tech: '',
       image_url: notch_img
     },
     {
-      title: 'Workof Ecommerce',
-      desc: `This is an Ecommerce furniture site. It provides a single platform to multiple vendors where they can put their products on sale.`,
-      tech: 'ruby, rails, javascript',
+      title: '',
+      desc: ``,
+      tech: '',
       image_url: workof_img
     },
     {
-      title: 'Souq of Qatar',
-      desc: `Souq of Qatar is online comparison website. This website is independent of any retailers, it displays the products of all the major stores.
-      Just like when you compare prices and products while visiting physical shops and stores, online price comparison behaves in the same way.`,
-      tech: 'ruby, rails, javascript',
+      title: '',
+      desc: ``,
+      tech: '',
       image_url: souq_img
     },
     {
-      title: 'GoSave',
-      desc: `The GoSave app let's you send allowances, assign chores, and approve spending all from your smartphone. These actions appear on each kid's toy, along with a live bank balance so they can watch their savings grow.`,
-      tech: 'ruby, rails',
+      title: '',
+      desc: ``,
+      tech: '',
       image_url: gosave_img
     }
   ];

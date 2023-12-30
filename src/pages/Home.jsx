@@ -68,8 +68,6 @@ export default function Home() {
         refresh_token={import.meta.env.VITE_REFRESH_TOKEN}
       />
 
-
-
       <Box w="100%" mx="auto" px="auto"> 
         <TestTimeline/>
       </Box>
