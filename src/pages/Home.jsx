@@ -62,8 +62,6 @@ export default function Home() {
         <Introduction/>
       </Box>
 
-      <SpotifyPlayer/>
-
       <Box w="100%" mx="auto" px="auto"> 
         <TestTimeline/>
       </Box>

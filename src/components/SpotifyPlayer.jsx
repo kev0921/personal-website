@@ -24,26 +24,29 @@ const SpotifyPlayer = (props) => {
         props.refresh_token
       ),
     ]).then((results) => {
+      console.log("API Response:", results[0]); // Log the API response
       setResult(results[0]);
       setLoading(false);
     });
-  });
+  }, []); // empty dependency array
 
   return (
     <Center>
       <Box width="xs">
-        {loading ?
+        {loading ? (
           <Stack align="center" mb={8}>
             <Spinner size="md" speed="0.6s" thickness={3} color="gray.500" />
           </Stack>
-          :
-          <Stack width="full" mb={result.isPlaying ? 2 : 4} spacing={3}>
+        ) : (
+          <Stack width="full" mb={result ? 2 : 4} spacing={3}>
             <Stack spacing={2} direction="row" align="center">
               <SpotifyLogo />
-              <Text fontWeight="semibold">{result.isPlaying ? 'Now playing' : "Currently offline"}</Text>
-              {result.isPlaying && <PlayingAnimation />}
+              <Text fontWeight="semibold">
+                {result ? 'Now playing' : "Currently offline"}
+              </Text>
+              {result && result.isPlaying && <PlayingAnimation />}
             </Stack>
-            {result.isPlaying &&
+            {result && (
               <Box p={2} borderRadius="lg" borderWidth={1}>
                 <Stack direction="row" spacing={4} align="center">
                   <Image
@@ -59,27 +62,23 @@ const SpotifyPlayer = (props) => {
                         fontWeight="semibold"
                         width="full"
                         isTruncated
-                        color="alph"
+                        color="gray.500"
                       >
                         {result.title}
                       </Text>
                     </Link>
-                    <Text
-                      color="gray.500"
-                      isTruncated
-                    >
+                    <Text color="gray.500" isTruncated>
                       {result.artist}
                     </Text>
-                    <Text></Text>
                   </Stack>
                 </Stack>
               </Box>
-            }
+            )}
           </Stack>
-        }
+        )}
       </Box>
     </Center>
-  )
+  );
 };
 
 export default SpotifyPlayer;

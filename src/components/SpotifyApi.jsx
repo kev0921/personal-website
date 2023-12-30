@@ -8,7 +8,7 @@ const client_secret = import.meta.env.VITE_CLIENT_SECRET;
 const refresh_token = import.meta.env.VITE_REFRESH_TOKEN;
 
 const getAccessToken = async () => {
-  const basic = Buffer.from(`${client_id}:${client_secret}`).toString("base64");
+  const basic = btoa(`${client_id}:${client_secret}`);
 
   try {
     const response = await fetch(TOKEN_ENDPOINT, {
