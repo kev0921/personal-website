@@ -54,8 +54,8 @@ export default function Home() {
   
 
   return (
-    <VStack spacing={6} px={[0, 2, "auto"]} mt={[4, 10]} mx="auto">
-      <Box mt={["90px", "0px"]} maxW={["95%", "50%"]} p={[6, 8, "0px"]}>
+    <VStack spacing={6} mt={[4, 10]} px="10px">
+      <Box mt={["90px", "0px"]} maxW="63rem" p={[6, 8, "0px"]}>
         <Box fontSize={["30px", "35px", "40px"]} fontWeight="bold" color="blue.600">
           <TypingAnimation/>
         </Box>
@@ -74,7 +74,7 @@ export default function Home() {
         <TestTimeline/>
       </Box>
 
-      <Box mt="1rem" ml={[0, 0, "15%"]} mr={[0, 0, "15%"]} p="1rem" maxW="95%">
+      <Box mt="1rem" maxW="100%">
         <TestProjects/>
       </Box>
 
