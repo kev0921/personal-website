@@ -1,7 +1,19 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import {
+  Box,
+  Stack,
+  Image,
+  Text,
+  Link,
+  Spinner,
+} from "@chakra-ui/react";
+import styled from "styled-components";
 import getNowPlayingItem from "./SpotifyApi";
+import SpotifyLogo from "./SpotifyLogo";
+import PlayingAnimation from "./PlayingAnimation";
 
-function SpotifyPlayer(props) {
+const SpotifyPlayer = (props) => {
+  const [loading, setLoading] = useState(true);
   const [result, setResult] = useState({});
 
   useEffect(() => {
@@ -13,69 +25,68 @@ function SpotifyPlayer(props) {
       ),
     ]).then((results) => {
       setResult(results[0]);
+      setLoading(false);
     });
-  }, []);
+  });
 
-  const trackInfoStyle = {
-    width: "70%",
-    float: "left",
-    display: "block",
-  };
-
-  const trackTitleStyle = {
-    fontSize: "14px",
-    textAlign: "left",
-    textDecoration: "none",
-    verticalAlign: "middle",
-    overflow: "hidden",
-    whiteSpace: "nowrap",
-    textOverflow: "ellipsis",
-  };
-
-  const oddLinkStyle = {
-    color: "black",
-    fontWeight: "bold",
-    verticalAlign: "middle",
-    lineHeight: "15px",
-    letterSpacing: "0.2px",
-    padding: "10% 0 0 5%",
-  };
-
-  const evenLinkStyle = {
-    color: "gray",
-    fontSize: "12px",
-    letterSpacing: "0.1px",
-    padding: "5% 0 0 5%",
-  };
-
-  return result.isPlaying ? (
-    <div className="nowplayingcard">
-      <div className="nowplayingcontainer-inner">
-        <img
-          id="trackart"
-          src={result.albumImageUrl}
-          style={{
-            maxWidth: "30%",
-            float: "left",
-            left: "0",
-            borderTopLeftRadius: "3px",
-            borderBottomLeftRadius: "3px",
-            // Add other image styles here...
-          }}
-        ></img>
-        <div className="trackInfo" style={trackInfoStyle}>
-          <a id="tracktitle" style={trackTitleStyle}>
-            {result.title}
-          </a>
-          <a href="#" id="trackartist" style={oddLinkStyle}>
-            {result.artist}
-          </a>
-        </div>
-      </div>
-    </div>
-  ) : (
-    <div>Not playing</div>
-  );
-}
+  return (
+    <Center>
+      <Box width="xs">
+        {loading ?
+          <Stack align="center" mb={8}>
+            <Spinner size="md" speed="0.6s" thickness={3} color="gray.500" />
+          </Stack>
+          :
+          <Stack width="full" mb={result.isPlaying ? 2 : 4} spacing={3}>
+            <Stack spacing={2} direction="row" align="center">
+              <SpotifyLogo />
+              <Text fontWeight="semibold">{result.isPlaying ? 'Now playing' : "Currently offline"}</Text>
+              {result.isPlaying && <PlayingAnimation />}
+            </Stack>
+            {result.isPlaying &&
+              <Box p={2} borderRadius="lg" borderWidth={1}>
+                <Stack direction="row" spacing={4} align="center">
+                  <Image
+                    alt={`${result.title} album art`}
+                    src={result.albumImageUrl}
+                    width={12}
+                    height={12}
+                    borderRadius="sm"
+                  />
+                  <Stack spacing={0} overflow="hidden">
+                    <Link href={result.songUrl} target="_blank">
+                      <Text
+                        fontWeight="semibold"
+                        width="full"
+                        isTruncated
+                        color="alph"
+                      >
+                        {result.title}
+                      </Text>
+                    </Link>
+                    <Text
+                      color="gray.500"
+                      isTruncated
+                    >
+                      {result.artist}
+                    </Text>
+                    <Text></Text>
+                  </Stack>
+                </Stack>
+              </Box>
+            }
+          </Stack>
+        }
+      </Box>
+    </Center>
+  )
+};
 
 export default SpotifyPlayer;
+
+const Center = styled.div`
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;
