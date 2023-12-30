@@ -62,7 +62,7 @@ export default function Home() {
         <Introduction/>
       </Box>
 
-      <SpotifyPlayer client_id="34c8bca2ee1347f3a16a8ec9b00f5a4c" client_secret="dec490abae4447efb6dc693b5002f229" refresh_token="AQAURWfTRKbz5TlOBThNqBVOieXmDTaKlIYYXgImNIg3mdLPqIXXYc24aiIdPo3o5MhFkabXuJqllX6LfHH2nG8kcvmS1epvDhEQWhh4RHfJXGEcHE29V9uZAeYvw7O8ebw"></SpotifyPlayer>
+      <SpotifyPlayer client_id={process.env.CLIENT_ID} client_secret={process.env.CLIENT_SECRET} refresh_token={process.env.REFRESH_TOKEN}></SpotifyPlayer>
 
       <Box w="100%" mx="auto" px="auto"> 
         <TestTimeline/>
