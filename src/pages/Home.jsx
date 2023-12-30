@@ -62,11 +62,7 @@ export default function Home() {
         <Introduction/>
       </Box>
 
-      <SpotifyPlayer
-        client_id={import.meta.env.VITE_CLIENT_ID}
-        client_secret={import.meta.env.VITE_CLIENT_SECRET}
-        refresh_token={import.meta.env.VITE_REFRESH_TOKEN}
-      />
+      <SpotifyPlayer/>
 
       <Box w="100%" mx="auto" px="auto"> 
         <TestTimeline/>
