@@ -8,8 +8,8 @@ export default function RootLayout() {
 
   return (
     <Grid templateColumns="repeat(3, 1fr)" bg={colorMode === "dark" ? "black" : "#F2F6F6"} transition="color, background-color 1s ease!important" >
-      <GridItem colSpan="3" display="flex" justifyContent="center">
-        <Navbar bg={colorMode === "dark" ? "rgba(0, 0, 0, 0.7)" : "rgba(255, 255, 255, 0.5)"}/>
+      <GridItem colSpan="3" display="flex" justifyContent="center" boxShadow="md">
+        <Navbar/>
       </GridItem>
 
       <GridItem colSpan="3">

@@ -25,11 +25,11 @@ const Introduction = () => {
 
     return ( 
         <Box mt="10px" fontWeight="normal" fontSize={["15px", "18px"]} pt="10px" lineHeight={1.8} color="gray.600">
-            <Text mb={5} color={colorMode === "dark" ? "gray.500" : "gray.600"} mr={["2px", "5%", "150px"]}>
+            <Text mb={5} color={colorMode === "dark" ? "gray.500" : "gray.600"} mr={["2px", "5%", "0px"]}>
                 Your friendly neighbourhood software developer and student from UofT. As a relatively new software developer, I spend my days exploring new technologies and frameworks to learn on top of my student responsibilities. 
             </Text>
 
-            <Text color={colorMode === "dark" ? "gray.500" : "gray.600"} mr={["2px", "5%", "150px"]}>
+            <Text color={colorMode === "dark" ? "gray.500" : "gray.600"} mr={["2px", "5%", "0px"]}>
                 When I am not exploring the vast sea that is computer science, I enjoy my time indulging in my favourite hobbies and rocking out to my favourite artists.
             </Text>
 

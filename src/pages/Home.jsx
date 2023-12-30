@@ -4,6 +4,9 @@ import Introduction from "../components/Introduction";
 import VerticalTimeline from "../components/Timeline";
 import Projects from "../components/Projects";
 import Timeline from "../components/TestTimeline.";
+import TestTimeline from "../components/TestTimeline.";
+import TestProjects from '../components/TestProjects';
+import SpotifyPlayer from "../components/SpotifyPlayer";
 
 export default function Home() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -51,22 +54,22 @@ export default function Home() {
   
 
   return (
-    <VStack spacing={6} px={[0, 2, 4]} mt={[4, 40]}>
-      <Box mt={["90px", "0px"]} maxW={["95%", "75%"]} borderWidth="8px" borderColor="blue.600" p={[6, 8, "80px"]} borderStyle="double">
-        <Box fontSize={["30px", "35px", "40px"]} fontWeight="bold" minW={["95%", "85%"]}>
+    <VStack spacing={6} px={[0, 2, "auto"]} mt={[4, 10]} mx="auto">
+      <Box mt={["90px", "0px"]} maxW={["95%", "50%"]} p={[6, 8, "0px"]}>
+        <Box fontSize={["30px", "35px", "40px"]} fontWeight="bold" color="blue.600">
           <TypingAnimation/>
         </Box>
         <Introduction/>
       </Box>
 
-      <Heading alignSelf="flex-start" ml={["5%", "5%", "15%"]} mr={["auto", "auto"]} mt={["250px", "150px"]} color="blue.600" fontSize={[45, 50, 50]}>Experiences</Heading>
+      <SpotifyPlayer client_id="34c8bca2ee1347f3a16a8ec9b00f5a4c" client_secret="dec490abae4447efb6dc693b5002f229" refresh_token="AQAURWfTRKbz5TlOBThNqBVOieXmDTaKlIYYXgImNIg3mdLPqIXXYc24aiIdPo3o5MhFkabXuJqllX6LfHH2nG8kcvmS1epvDhEQWhh4RHfJXGEcHE29V9uZAeYvw7O8ebw"></SpotifyPlayer>
 
-      <Box  ml={[0, "7%", "15%"]} mr={[0, "7%", "15%"]} mt={["5%", "0px", "1.5%"]} pl={["7%", "1rem"]} pr={["7%", "1rem"]}> 
-        <VerticalTimeline/>
+      <Box w="100%" mx="auto" px="auto"> 
+        <TestTimeline/>
       </Box>
 
       <Box mt="1rem" ml={[0, 0, "15%"]} mr={[0, 0, "15%"]} p="1rem" maxW="95%">
-        <Projects/>
+        <TestProjects/>
       </Box>
 
     </VStack>

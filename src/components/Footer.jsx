@@ -24,7 +24,7 @@ const Footer = () => {
 
             <Spacer/>
 
-            <Text textAlign="center" fontFamily="initial" fontSize={["0px", "18px"]}>
+            <Text textAlign="center" fontFamily="initial" fontSize={["0px", "18px"]} color="gray.500">
                 Created by me :{")"}
             </Text>
 
@@ -33,19 +33,19 @@ const Footer = () => {
             <Flex alignItems="center">
                 <Flex alignItems="center" mr={[2.5, 5]}>
                     <a href="https://www.linkedin.com/in/kevinhu04/" style={iconStyles}>
-                    <Icon as={BsLinkedin} boxSize={6} color="blue.500" transition="color 0.3s ease" _hover={{ color: colorMode === "dark" ? "white" : "black" }} />
+                    <Icon as={BsLinkedin} boxSize={6} color="blue.500" transition="color 0.3s ease" _hover={{ color: colorMode === "dark" ? "blue.600" : "blue.600" }} />
                     </a>
                 </Flex>
 
                 <Flex alignItems="center" mr={[2.5, 5]}>
                     <a href="https://github.com/kev0921" style={iconStyles}>
-                    <Icon as={DiGithubBadge} boxSize={10} color="blue.500" transition="color 0.3s ease" _hover={{ color: colorMode === "dark" ? "white" : "black" }} />
+                    <Icon as={DiGithubBadge} boxSize={10} color="black" transition="color 0.3s ease" _hover={{ color: colorMode === "dark" ? "blue.600" : "blue.600" }} />
                     </a>
                 </Flex>
 
                 <Flex alignItems="center" mr={[2.5, 5]}>
                     <a href="https://www.instagram.com/kevinhu04/" style={iconStyles}>
-                    <Icon as={FaInstagram} boxSize={7} color="blue.500" transition="color 0.3s ease" _hover={{ color: colorMode === "dark" ? "white" : "black" }} />
+                    <Icon as={FaInstagram} boxSize={7} color="pink.400" transition="color 0.3s ease" _hover={{ color: colorMode === "dark" ? "blue.600" : "blue.600" }} />
                     </a>
                 </Flex>
             </Flex>
