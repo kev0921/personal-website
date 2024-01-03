@@ -26,10 +26,13 @@ function Company({
   logo,
   colorMode,
   alt,
-  isEducation = false
+  isEducation = false,
+  company_url,
 }) {
   return (
     <Box
+      as='a'
+      href={company_url}
       paddingX={4}
       paddingY={5}
       _hover={{
@@ -109,7 +112,8 @@ const TestTimeline = () => {
       role: 'Web Developer',
       skills: 'React, Tailwind CSS, JavaScript',
       period: 'July 2023 - Present',
-      logo: PhaedraLogo
+      logo: PhaedraLogo,
+      company_url: ''
     },
     {
       title: 'RCHRA',
@@ -117,7 +121,8 @@ const TestTimeline = () => {
       role: 'Web Developer',
       skills: 'HTML, CSS, JavaScript, Bootstrap, React',
       period: 'Nov 2022 - Apr 2023',
-      logo: PhaedraLogo
+      logo: PhaedraLogo,
+      company_url: ''
     },
     {
       title: 'RHHS Robotics',
@@ -125,7 +130,8 @@ const TestTimeline = () => {
       role: 'General Executive',
       skills: 'Arduino, C++',
       period: 'Oct 2021 - Apr 2022',
-      logo: BrainxLogo
+      logo: BrainxLogo,
+      company_url: ''
     },
     {
       title: 'Trillium Woods',
@@ -133,7 +139,8 @@ const TestTimeline = () => {
       role: 'Volunteer',
       skills: 'Communication, Leadership, Team Work, Organization',
       period: 'Sept 2018 - Feb 2019',
-      logo: BrainxLogo
+      logo: BrainxLogo,
+      company_url: ''
     },
   ];
   return (
@@ -167,6 +174,7 @@ const TestTimeline = () => {
             period={company.period}
             logo={company.logo}
             colorMode={colorMode}
+            company_url={company.company_url}
           />
         ))}
       </Stack>
@@ -193,6 +201,7 @@ const TestTimeline = () => {
           logo={UniLogo}
           colorMode={colorMode}
           isEducation={true}
+          company_url=''
         />
       </Stack>
     </Stack>
